@@ -19,7 +19,7 @@ export interface IStory {
 
 export const story : IStory = {
     m01 : {
-        message: 'Cześć Employeer 2137, jak zapewne zauważyłeś, zablokowałem Ci dostęp do komputera, odblokuję Ci dostęp do wszystkich plików, Jednak muszisz spełnić moje żądania, BA zmienić sie i przeprosić. Jeśli nie bedziesz sie stosował do moich poleceń usune wszystkie dane z bazydanych do których masz dostęp, następnie zatre wszystkie ślady mojej obecności wina spadnie na ciebie a zwolnienie murowane. mam nadzieje ze sie rozumiemy.',
+        message: 'Cześć Employer 2137, jak zapewne zauważyłeś, zablokowałem Ci dostęp do komputera, odblokuję Ci dostęp do wszystkich plików, Jednak muszisz spełnić moje żądania, BA zmienić sie i przeprosić. Jeśli nie bedziesz sie stosował do moich poleceń usune wszystkie dane z bazydanych do których masz dostęp, następnie zatre wszystkie ślady mojej obecności wina spadnie na ciebie a zwolnienie murowane. mam nadzieje ze sie rozumiemy.',
         type: messgaeType.hacker,
     },
     m02 : {
@@ -95,6 +95,18 @@ export const story : IStory = {
         fnOpt: 'o04',
         type: messgaeType.hacker,
     },
+    m16 : {
+        message: "Jan?",
+        type: messgaeType.user,
+        fnOpt: 'o00',
+        fnMsg: 'm99'
+    },
+    m17 : {
+        message : "Paweł?",
+        type: messgaeType.user,
+        fnOpt: 'o00',
+        fnMsg: 'm99'
+    },
     m99 : {
         message : "Miarka sie przebrała, pożegnaj sie z pracą.",
         type: messgaeType.hacker,
@@ -165,12 +177,12 @@ export const options: IOptions = {
         option1: {
             text: "Jan",
             className: optionType.normal,
-            fn: 'm99',
+            fn: 'm16',
         },
         option2: {
             text: "Paweł",
             className: optionType.normal,
-            fn: 'm99',
+            fn: 'm17',
         }
     }
 
