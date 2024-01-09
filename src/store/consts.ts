@@ -1,6 +1,6 @@
 export const auth = {
-    login: '123',
-    password: '123',
+    login: 'Employer2137',
+    password: 'okoń',
 }
 
 enum messgaeType  {
