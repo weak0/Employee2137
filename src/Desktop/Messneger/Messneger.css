@@ -1,0 +1,126 @@
+.msg {
+    display: flex;
+    position: fixed;
+    top:50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: rgb(26, 24, 24);
+    border: 3px solid rgb(44, 47, 235);
+    border-radius: 10px;
+    padding: 10px;
+    flex-direction: column;
+    width: 50%;
+    color: white;
+    box-shadow: 0 0 10px 0 rgb(44, 47, 235);
+}
+.msg-header {
+    margin: 0;
+    padding: 0;
+    font-size: 24px;
+    text-align: center;
+    color: rgb(255, 255, 255);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 0 10px;
+    border-bottom: 1px solid rgb(3, 3, 3);
+}
+.msg-header svg {
+    cursor: pointer;
+    color: red;
+}
+#avatar {
+    width: 50px;
+    height: 50px;
+    border-radius: 50%;
+    background-size: auto;
+    margin-right: 10px;
+
+}
+.msg-contacts {
+display: flex;
+flex-direction: column;
+gap: 10px;
+ width: 30%;
+height: 100%;
+border-right: 1px solid rgb(3, 3, 3);
+padding: 10px;
+cursor: pointer;
+}
+.contact{
+    display: flex;
+}
+.msg-chat {
+    overflow-y: scroll;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    max-height: 400px;
+  }
+.msg-main {
+    display: flex;
+    width: 100%;
+    padding: 10px;
+    gap: 10px;
+}
+.msg-hacker {
+    clear: both;
+    background-color: rgb(15, 129, 182);
+    padding: 10px;
+    border-radius: 5px;
+    float: right;
+    margin-left: 20px;
+    margin-right: 5px;
+}
+.msg-narration {
+    color: rgb(37, 105, 37);
+    font-size: 14px;
+    background-color: black;
+    padding: 10px;
+    font-style: italic;
+    border-radius: 5px;
+    clear: both;
+}
+.msg-user {
+    background-color: rgb(150, 41, 252);
+    padding: 10px;
+    border-radius: 5px;
+    float: left;
+    margin-left: 5px;
+    margin-right: 20px;
+    clear: both;
+}
+.msg-input {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 10px;
+    border-top: 1px solid rgb(3, 3, 3);
+}
+.chat-input  {
+    display: flex;
+    justify-content: space-around;
+    gap: 10px;
+}
+.chat-input button {
+    border : 2px solid rgb(77, 4, 99);
+    background-color: transparent;    
+    border-radius: 5px;
+    padding: 10px;
+    color: white;
+    text-transform: uppercase;
+    cursor: pointer;
+    transition: 0.3s;
+}
+.chat-input button:hover {
+    background-color: rgb(77, 4, 99);
+}
+.chat-input button.tip {
+    border-color: green;
+    border-style: dashed;
+    cursor: default;
+}
+.chat-input button.tip:hover {
+    background-color: transparent;
+}
+
