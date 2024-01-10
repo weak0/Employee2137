@@ -1,5 +1,5 @@
 import { ReactElement, createContext, useState } from "react";
-import { IStory, auth } from "./consts";
+import { auth } from "./consts";
 
 interface ContextProps {
     isUserLogged: boolean;
@@ -12,11 +12,11 @@ interface ContextProps {
 
  const defaultContext : ContextProps = {
     isUserLogged: false,
-    userLogin: (login : string, password: string) => {},
+    userLogin: () => {},
     messages : [],
-    setMessages : (messages : string) => {},
+    setMessages : () => {},
     options : '',
-    setOptions : (options : string) => {},
+    setOptions : () => {},
 };
 
 export const Context = createContext(defaultContext);
