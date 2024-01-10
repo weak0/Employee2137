@@ -3,8 +3,8 @@ import { useContext, useState } from 'react'
 import { Context } from './store/context';
 import Desktop from './Desktop/Desktop';
 function App() {
-  const [login, setLogin] = useState('');
-  const [password, setPassword] = useState('');
+  const [login, setLogin] = useState('Employer2137');
+  const [password, setPassword] = useState('okoń');
   const { userLogin, isUserLogged } = useContext(Context);
 
   return (
