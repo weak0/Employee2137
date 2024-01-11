@@ -24,13 +24,13 @@ const Console = () => {
         break;
       case 'toitakbynicniedalo':
         if (consoleRef.current) {
-        consoleRef.current.innerHTML += "GRUPA: Fanpage Mariusz Pudzianowski <br />"
-        consoleRef.current.innerHTML += "Autor: Employer2137 <br />"
-        consoleRef.current.innerHTML += "Pudzian to sterydziarz, wcale nie jest taki silny a w kulach to wgl był drugi <br />"
+          consoleRef.current.innerHTML += "GRUPA: Fanpage Mariusz Pudzianowski <br />"
+          consoleRef.current.innerHTML += "Autor: Employee2137 <br />"
+          consoleRef.current.innerHTML += "Pudzian to sterydziarz, wcale nie jest taki silny a w kulach to wgl był drugi <br />"
         }
         setMessages('m15')
         break;
-    
+
       default:
         if (consoleRef.current) {
           consoleRef.current.innerHTML += `${comand} nie jest rozpoznawalną komendą <br />`
@@ -43,19 +43,20 @@ const Console = () => {
     if (key.code === 'Enter') {
       runComand(input.toLowerCase().trim())
       setInput('')
-    }}
-
-
-
-      return (
-        <div className='console' onKeyDown={handleClick}>
-          <div className='console-output' ref={consoleRef}>
-            Microsoft Windows [Version 10.0.22631.2861]<br />
-            (c) Microsoft Corporation. Wszelkie prawa zastrzeżone.<br />
-          </div>
-          C:Users/Employer2137:<input className='console-input' value={input} onChange={(e) => setInput(e.target.value)} />
-        </div>
-      )
+    }
   }
 
-  export default Console
+
+
+  return (
+    <div className='console' onKeyDown={handleClick}>
+      <div className='console-output' ref={consoleRef}>
+        Microsoft Windows [Version 10.0.22631.2861]<br />
+        (c) Microsoft Corporation. Wszelkie prawa zastrzeżone.<br />
+      </div>
+      C:Users/Employee2137:<input className='console-input' value={input} onChange={(e) => setInput(e.target.value)} />
+    </div>
+  )
+}
+
+export default Console
