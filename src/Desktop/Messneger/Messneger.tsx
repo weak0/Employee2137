@@ -1,4 +1,4 @@
-import { useEffect, useContext } from "react";
+import { useEffect, useContext, useState } from "react";
 import { IoIosCloseCircleOutline } from "react-icons/io";
 import './Messneger.css'
 import avatar from '../../assets/jp2.jpg'
@@ -12,12 +12,30 @@ const Messneger = ({ close }: { close: () => void }) => {
     const inputFieldRef = useRef<HTMLInputElement>(null)
     const contacts = ['Paul', 'Zbychu', 'Boss', 'Basia', 'Piotrek', 'Maciek']
     const { messages, setMessages, options, setOptions } = useContext(Context)
+    const [readQueue, setReadQueue] = useState<string[]>([])
 
+    const [audioElement, setAudioElement] = useState<HTMLAudioElement | null>(null);
 
+useEffect(() => {
+    if (audioElement) {
+        audioElement.addEventListener('ended', () => {
+            setReadQueue(prevState => prevState.slice(1));
+        });
+    }
+}, [audioElement]);
+
+useEffect(() => {
+    if (readQueue.length > 0 && (!audioElement || audioElement.ended)) {
+        const newAudioElement = new Audio(readQueue[0]);
+        newAudioElement.play();
+        setAudioElement(newAudioElement);
+    }
+}, [readQueue, audioElement]);
+  
     useEffect(() => {
-        console.log(messages)
         story[messages[messages.length - 1]]?.fnOpt !== undefined && setOptions(story[messages[messages.length - 1]].fnOpt)
         story[messages[messages.length - 1]]?.fnMsg !== undefined && setMessages(story[messages[messages.length - 1]].fnMsg)
+        setReadQueue(prevState => [...prevState, story[messages[messages.length - 1]].audio])
     }, [messages])
 
 return (
