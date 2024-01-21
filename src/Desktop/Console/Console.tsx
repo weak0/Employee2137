@@ -17,6 +17,7 @@ const Console = () => {
       case 'djmusic':
         let audio = new Audio(music)
         audio.play()
+        audio.volume = 0.1
         if (consoleRef.current) {
           consoleRef.current.innerHTML += "Run Jan Paweł the greatest hits...<br />"
         }
